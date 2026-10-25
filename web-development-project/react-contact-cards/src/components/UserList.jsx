@@ -1,0 +1,2 @@
+import ContactCard from './ContactCard.jsx';
+export default function UserList({ contacts, onRemove }) { return <section className="user-list"><div className="list-heading"><div><p className="eyebrow">YOUR DIRECTORY</p><h2>Contacts <span>{contacts.length}</span></h2></div></div>{contacts.length ? <div className="cards">{contacts.map(contact => <ContactCard key={contact.id} contact={contact} onRemove={onRemove} />)}</div> : <div className="empty">No contacts yet. Add your first contact using the form.</div>}</section>; }
